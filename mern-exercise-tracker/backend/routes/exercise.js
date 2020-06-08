@@ -6,9 +6,7 @@ router.route('/').get( (req, res) => {
         .then(exercises => res.json(exercises))
         .catch(err => res.status(400).json('Error:' + err));
 });
-console.log("123 seda miad?")
 router.route('/add').post( (req, res) => {
-    console.log("seda miad?")
     const username = req.body.username;
     const description = req.body.description;
     const duration = Number(req.body.duration);
